@@ -1,11 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import Typed from 'typed.js';
-import { Code2, Github, Linkedin, Twitter, ChevronLeft, ChevronRight, Home } from 'lucide-react';
-import About from './pages/About';
-import HomePage from './pages/HomePage';
-import Learning from './pages/Learning';
+import React, { useEffect, useRef, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Typed from "typed.js";
+import {
+  Code2,
+  Github,
+  Linkedin,
+  Twitter,
+  ChevronLeft,
+  ChevronRight,
+  Home,
+} from "lucide-react";
+import About from "./pages/About";
+import HomePage from "./pages/HomePage";
+import Learning from "./pages/Learning";
 
 // function HomePage() {
 //   const typedRef = useRef(null);
@@ -51,13 +59,13 @@ import Learning from './pages/Learning';
 //   }, []);
 
 //   const nextTestimonial = () => {
-//     setCurrentTestimonial((prev) => 
+//     setCurrentTestimonial((prev) =>
 //       prev === companyTestimonials.length - 1 ? 0 : prev + 1
 //     );
 //   };
 
 //   const prevTestimonial = () => {
-//     setCurrentTestimonial((prev) => 
+//     setCurrentTestimonial((prev) =>
 //       prev === 0 ? companyTestimonials.length - 1 : prev - 1
 //     );
 //   };
@@ -68,8 +76,8 @@ import Learning from './pages/Learning';
 
 //   const fadeInUpVariants = {
 //     hidden: { opacity: 0, y: 20 },
-//     visible: { 
-//       opacity: 1, 
+//     visible: {
+//       opacity: 1,
 //       y: 0,
 //       transition: {
 //         duration: 0.8,
@@ -96,7 +104,7 @@ import Learning from './pages/Learning';
 //         style={{ opacity }}
 //         className="min-h-screen flex items-center justify-center relative overflow-hidden"
 //       >
-//         <motion.div 
+//         <motion.div
 //           className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent"
 //           animate={{
 //             scale: [1, 1.1, 1],
@@ -108,7 +116,7 @@ import Learning from './pages/Learning';
 //             ease: "easeInOut"
 //           }}
 //         />
-        
+
 //         <div className="container mx-auto px-6 text-center relative z-10">
 //           <motion.h1
 //             initial={{ opacity: 0, y: 20 }}
@@ -118,12 +126,12 @@ import Learning from './pages/Learning';
 //           >
 //             <span ref={typedRef}></span>
 //           </motion.h1>
-          
+
 //           <motion.button
 //             initial={{ opacity: 0 }}
 //             animate={{ opacity: 1 }}
 //             transition={{ delay: 0.5 }}
-//             whileHover={{ 
+//             whileHover={{
 //               scale: 1.05,
 //               boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)"
 //             }}
@@ -152,7 +160,7 @@ import Learning from './pages/Learning';
 //       {/* Developer Skills Platform */}
 //       <section className="py-24 bg-gray-900">
 //         <div className="container mx-auto px-6">
-//           <motion.div 
+//           <motion.div
 //             className="grid md:grid-cols-2 gap-12 items-center"
 //             variants={staggerContainerVariants}
 //             initial="hidden"
@@ -168,9 +176,9 @@ import Learning from './pages/Learning';
 //               <p className="text-gray-400 mb-8">
 //                 Over 26 million developers have joined Coding Adda to level up their skills and land their dream job!
 //               </p>
-//               <motion.button 
+//               <motion.button
 //                 className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all"
-//                 whileHover={{ 
+//                 whileHover={{
 //                   scale: 1.05,
 //                   boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)"
 //                 }}
@@ -179,7 +187,7 @@ import Learning from './pages/Learning';
 //                 Join the Coding Adda Community
 //               </motion.button>
 //             </motion.div>
-            
+
 //             <motion.div
 //               variants={fadeInUpVariants}
 //               className="relative h-[400px] rounded-lg overflow-hidden"
@@ -197,7 +205,7 @@ import Learning from './pages/Learning';
 
 //       {/* Company Testimonials */}
 //       <section className="py-24 bg-gray-900/80 relative overflow-hidden">
-//         <motion.div 
+//         <motion.div
 //           className="absolute inset-0 bg-gradient-to-b from-cyan-500/10 to-transparent"
 //           animate={{
 //             opacity: [0.3, 0.6, 0.3],
@@ -237,7 +245,7 @@ import Learning from './pages/Learning';
 //                 animate={{ scale: 1, opacity: 1 }}
 //                 transition={{ duration: 0.5 }}
 //               />
-//               <motion.p 
+//               <motion.p
 //                 className="text-xl md:text-2xl text-gray-300 mb-8"
 //                 initial={{ opacity: 0, y: 20 }}
 //                 animate={{ opacity: 1, y: 0 }}
@@ -245,7 +253,7 @@ import Learning from './pages/Learning';
 //               >
 //                 "{companyTestimonials[currentTestimonial].text}"
 //               </motion.p>
-//               <motion.div 
+//               <motion.div
 //                 className="flex flex-col items-center"
 //                 initial={{ opacity: 0, y: 20 }}
 //                 animate={{ opacity: 1, y: 0 }}
@@ -306,7 +314,7 @@ import Learning from './pages/Learning';
 //           >
 //             What Our Students Say
 //           </motion.h2>
-//           <motion.div 
+//           <motion.div
 //             className="grid md:grid-cols-3 gap-8"
 //             variants={staggerContainerVariants}
 //             initial="hidden"
@@ -343,7 +351,7 @@ import Learning from './pages/Learning';
 //       {/* Footer */}
 //       <footer className="bg-gray-900 border-t border-gray-800">
 //         <div className="container mx-auto px-6 py-12">
-//           <motion.div 
+//           <motion.div
 //             className="grid md:grid-cols-4 gap-8"
 //             variants={staggerContainerVariants}
 //             initial="hidden"
@@ -359,7 +367,7 @@ import Learning from './pages/Learning';
 //                 Empowering developers worldwide to achieve their coding dreams.
 //               </p>
 //             </motion.div>
-            
+
 //             {['Quick Links', 'Community', 'Resources'].map((section) => (
 //               <motion.div key={section} variants={fadeInUpVariants}>
 //                 <h3 className="font-semibold mb-4">{section}</h3>
@@ -375,8 +383,8 @@ import Learning from './pages/Learning';
 //               </motion.div>
 //             ))}
 //           </motion.div>
-          
-//           <motion.div 
+
+//           <motion.div
 //             className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between"
 //             variants={fadeInUpVariants}
 //             initial="hidden"
@@ -406,28 +414,74 @@ import Learning from './pages/Learning';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+
+    if (status === "success") {
+      setIsLoggedIn(true);
+
+      // Optional: clean URL
+      const url = new URL(window.location.href);
+      url.searchParams.delete("status");
+      window.history.replaceState({}, document.title, url);
+    } else if (status === "failure") {
+      setIsLoggedIn(false);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    window.location.href = "http://localhost:4000/auth/google";
+  };
+
+const handleLogout = async () => {
+  try {
+    // Frontend state update
+    setIsLoggedIn(false);
+
+    // Send GET request to backend logout endpoint
+    const response = await fetch("http://localhost:4000/logout", {
+      method: "GET",
+      credentials: "include", // important to include session cookies
+    });
+
+    const data = await response.json();
+
+    if (response.ok && data.message === "Logout successful") {
+      alert("Logged out successfully!");
+    } else {
+      alert("Logout failed on backend.");
+    }
+  } catch (error) {
+    console.error("Logout error:", error);
+    alert("Something went wrong while logging out.");
+  }
+};
+
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const staggerContainerVariants = {
@@ -436,37 +490,42 @@ function App() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   return (
     <Router>
       {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gray-900/95 backdrop-blur-sm' : 'bg-transparent'
-      }`}>
+      <nav
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          isScrolled ? "bg-gray-900/95 backdrop-blur-sm" : "bg-transparent"
+        }`}
+      >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <motion.div 
+            <motion.div
               className="flex items-center space-x-2"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
               <Code2 className="w-8 h-8 text-blue-500" />
-              <Link to="/" className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              <Link
+                to="/"
+                className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"
+              >
                 Coding Adda
               </Link>
             </motion.div>
-            
+
             <div className="hidden md:flex items-center space-x-8">
               {[
-                { name: 'Home', path: '/' },
-                { name: 'About', path: '/about' },
-                { name: 'Learning', path: '/learning' },
-                { name: 'Gaming', path: '/gaming' }
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Learning", path: "/learning" },
+                { name: "Gaming", path: "/gaming" },
               ].map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -484,7 +543,8 @@ function App() {
               ))}
             </div>
 
-            <motion.button 
+            <motion.button
+              onClick={isLoggedIn ? handleLogout : handleLogin}
               className="px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 transition-opacity"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -492,7 +552,7 @@ function App() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Login
+              {isLoggedIn ? "Logout" : "Login with Google"}
             </motion.button>
           </div>
         </div>
@@ -503,66 +563,71 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/learning" element={<Learning />} />
       </Routes>
-       {/* Footer */}
-              <footer className="bg-gray-900 border-t border-gray-800">
-                <div className="container mx-auto px-6 py-12">
-                  <motion.div 
-                    className="grid md:grid-cols-4 gap-8"
-                    variants={staggerContainerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                  >
-                    <motion.div variants={fadeInUpVariants}>
-                      <div className="flex items-center space-x-2 mb-6">
-                        <Code2 className="w-6 h-6 text-blue-500" />
-                        <span className="text-xl font-bold">Coding Adda</span>
-                      </div>
-                      <p className="text-gray-400">
-                        Empowering developers worldwide to achieve their coding dreams.
-                      </p>
-                    </motion.div>
-                    
-                    {['Quick Links', 'Community', 'Resources'].map((section) => (
-                      <motion.div key={section} variants={fadeInUpVariants}>
-                        <h3 className="font-semibold mb-4">{section}</h3>
-                        <ul className="space-y-2">
-                          {['Link 1', 'Link 2', 'Link 3'].map((link) => (
-                            <li key={link}>
-                              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                {link}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between"
-                    variants={fadeInUpVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                  >
-                    <p className="text-gray-400">© 2024 Coding Adda. All rights reserved.</p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
-                      {[Twitter, Github, Linkedin].map((Icon, i) => (
-                        <motion.a
-                          key={i}
-                          href="#"
-                          className="text-gray-400 hover:text-white transition-colors"
-                          whileHover={{ scale: 1.2, rotate: 10 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <Icon className="w-6 h-6" />
-                        </motion.a>
-                      ))}
-                    </div>
-                  </motion.div>
-                </div>
-              </footer>
+      {/* Footer */}
+      <footer className="bg-gray-900 border-t border-gray-800">
+        <div className="container mx-auto px-6 py-12">
+          <motion.div
+            className="grid md:grid-cols-4 gap-8"
+            variants={staggerContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={fadeInUpVariants}>
+              <div className="flex items-center space-x-2 mb-6">
+                <Code2 className="w-6 h-6 text-blue-500" />
+                <span className="text-xl font-bold">Coding Adda</span>
+              </div>
+              <p className="text-gray-400">
+                Empowering developers worldwide to achieve their coding dreams.
+              </p>
+            </motion.div>
+
+            {["Quick Links", "Community", "Resources"].map((section) => (
+              <motion.div key={section} variants={fadeInUpVariants}>
+                <h3 className="font-semibold mb-4">{section}</h3>
+                <ul className="space-y-2">
+                  {["Link 1", "Link 2", "Link 3"].map((link) => (
+                    <li key={link}>
+                      <a
+                        href="#"
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between"
+            variants={fadeInUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="text-gray-400">
+              © 2024 Coding Adda. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              {[Twitter, Github, Linkedin].map((Icon, i) => (
+                <motion.a
+                  key={i}
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Icon className="w-6 h-6" />
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </footer>
     </Router>
   );
 }
